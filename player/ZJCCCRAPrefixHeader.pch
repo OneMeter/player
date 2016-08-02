@@ -1,0 +1,97 @@
+//
+//  ZJCCCRAPrefixHeader.pch
+//  CCRA
+//
+//  Created by htkg on 16/2/24.
+//  Copyright © 2016年 htkg. All rights reserved.
+//
+
+#ifndef ZJCCCRAPrefixHeader_pch
+#define ZJCCCRAPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+
+/**
+ *  @author XiaoChuan, 16-04-29 15:04:19
+ *  
+ *  全局引用框架
+ *
+ */
+// 1.基础框架
+#import <Foundation/Foundation.h>
+// 2.基础UI框架
+#import <UIKit/UIKit.h>
+// 3.宏定义集
+#import "ZJCPublicDefine.h"
+// 5.全局适配类
+#import "ZJCFrameControl.h"
+#import <Masonry.h>
+// 6.全局弹窗类
+#import "ZJCAlertView.h"
+// 7.全剧请求类
+#import "AFHTTPRequestOperationManager+ZJCAFHTTPRequestOperationManager.h"
+// 8.全局缓存类(NSUserDefault)
+#import "ZJCNSUserDefault.h"
+// 9.UIView类别
+#import "UIView+Extension.h"
+#import "UIView+getGect.h"
+#import "UIView+Inspectable.h"
+// 10.视频播放器
+#import "DWSDK.h"
+// 11.全局带分割线视图
+#import "ZJCViewWithBottonLine.h"
+// 12.全局传值单例
+#import "ZJCPassValueControlManager.h"
+// 13.画虚线
+#import "ZJCDottedLine.h"
+// 14.全局图片缓存类
+#import <UIImageView+WebCache.h>
+// 15.全局数据库类
+#import "ZJCFMDBManager.h"
+// 16.全局下载管理类
+#import "ZJCDownControl.h"
+// 17.全局Loading类
+#import "ZJCLoadingView.h"
+// 18.全局网请错误信息类
+#import "ZJCHttpRequestErrorViews.h"
+// 19.更新视图
+#import "ZJCVersionUpdatedView.h"
+
+#endif /* ZJCCCRAPrefixHeader_pch */
+
+
+
+
+
+
+
+
+/**
+ *  @author XiaoChuan, 16-03-29 13:03:20
+ *  
+ *  调试工具箱
+ *
+ */
+#if DEBUG
+
+#define logtrace() NSLog(@"%s():%d ", __func__, __LINE__)
+#define logdebug(format, ...) NSLog(@"%s():%d "format, __func__, __LINE__, ##__VA_ARGS__)
+
+#else
+
+#define logdebug(format, ...)
+#define logtrace()
+
+#endif
+
+
+
+#define loginfo(format, ...) NSLog(@"%s():%d "format, __func__, __LINE__, ##__VA_ARGS__)
+
+#define logerror(format, ...) NSLog(@"%s():%d ERROR "format, __func__, __LINE__, ##__VA_ARGS__)
+
+#define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)

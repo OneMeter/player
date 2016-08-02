@@ -1,0 +1,63 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GPUImage (0.1.7)
+  - JSONModel (1.1.2)
+  - Masonry (0.6.4)
+  - MJNIndexView (0.0.1)
+  - MJRefresh (3.1.0)
+  - pop (1.0.9)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - WebViewJavascriptBridge (5.0.5)
+
+DEPENDENCIES:
+  - AFNetworking (<= 2.5.4)
+  - FMDB (~> 2.6.2)
+  - GPUImage (~> 0.1.7)
+  - JSONModel (~> 1.1.2)
+  - Masonry (~> 0.6.4)
+  - MJNIndexView (~> 0.0.1)
+  - MJRefresh (~> 3.1.0)
+  - pop (~> 1.0.9)
+  - SDWebImage (~> 3.7.3)
+  - WebViewJavascriptBridge (~> 5.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MJNIndexView: 6186c3ea302624ed5c008dba8a178677a7523cab
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
+
+PODFILE CHECKSUM: 02fd0e21ee07dc1381b14113e945b3d31fdbadae
+
+COCOAPODS: 1.0.0
