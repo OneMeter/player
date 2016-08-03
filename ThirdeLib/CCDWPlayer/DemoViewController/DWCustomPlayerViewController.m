@@ -1106,26 +1106,6 @@ typedef NSInteger DWPLayerScreenSizeMode;
     self.videoStatusLabel.font = [UIFont systemFontOfSize:16];
     [self.overlayView addSubview:self.videoStatusLabel];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #pragma mark - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>UIGestureRecognizerDelegate手势识别
 -(void)handleSignelTap:(UIGestureRecognizer*)gestureRecognizer{
     if (self.hiddenAll) {
@@ -1232,25 +1212,6 @@ typedef NSInteger DWPLayerScreenSizeMode;
     self.footerView.hidden = NO;
     self.hiddenAll = NO;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #pragma mark - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>根据播放链接更新涉及的视图
 - (void)resetViewContent{

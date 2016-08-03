@@ -379,16 +379,19 @@
 // 处理数据
 - (void)handleDataSourceWithReceiveData:(NSMutableArray *)dataSource{
     // 1.比较麻烦,获取到courseViewController   为了弹窗
-    ZJCTabBarViewController * tabbar = (ZJCTabBarViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    ZJCNavigationViewController * navContro = tabbar.viewControllers[0];
-    _currentController = (ZJCCourseViewController *)navContro.topViewController;
+//    ZJCTabBarViewController * tabbar = (ZJCTabBarViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//    NSLog(@"tabbar.viewControllers[0]:%@",tabbar.viewControllers[0]);
+//    ZJCNavigationViewController * navContro = tabbar.viewControllers[0];
     
+//    _currentController = (ZJCCourseViewController *)navContro.topViewController;
+    
+    _currentController = (ZJCCourseViewController *)NSClassFromString(@"ZJCCourseViewController");
     
     // 2.获取到当前的课程信息,存入数据库需要课程打头,所以需要请求课程列表的信息存放到本地
     AppDelegate * appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSString * codeId = [NSString stringWithFormat:@"%@_ios",appdelegate.codeId];
     NSString * username = [ZJCNSUserDefault getDataUsingNSUserDefaultWithDataType:ZJCUserInfor andKey:UserLoadInfor_LoadName];
-    NSString * urlString = [NSString stringWithFormat:[NSString stringWithFormat:@"http://app.ccs163.net/downlist/%@/%@"],codeId,username];
+    NSString * urlString = [NSString stringWithFormat:@"http://app.ccs163.net/downlist/%@/%@",codeId,username];
     [AFHTTPRequestOperationManager GET:urlString parameter:nil success:^(id responseObject) {
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         if ([dic[@"bl"] isEqualToNumber:@1]) {

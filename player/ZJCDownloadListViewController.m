@@ -73,14 +73,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 #pragma mark - 初始化
 - (void)selfInitDownloadListVC{
     // 标题
@@ -125,7 +117,7 @@
     NSString * codeId = [NSString stringWithFormat:@"%@_ios",appdelegate.codeId];
     NSString * username = [ZJCNSUserDefault getDataUsingNSUserDefaultWithDataType:ZJCUserInfor andKey:UserLoadInfor_LoadName];
     //下载列表接口
-    NSString * urlString = [NSString stringWithFormat:[NSString stringWithFormat:@"http://app.ccs163.net/downlist/%@/%@"],codeId,username];
+    NSString * urlString = [NSString stringWithFormat:@"http://app.ccs163.net/downlist/%@/%@",codeId,username];
 #else
     NSString * urlString = @"http://app.ccs163.net/downlist/2016041302215900_ios/pjb123";
 #endif
@@ -260,7 +252,7 @@
     NSString * codeId = [NSString stringWithFormat:@"%@_ios",appdelegate.codeId];
     NSString * username = [ZJCNSUserDefault getDataUsingNSUserDefaultWithDataType:ZJCUserInfor andKey:UserLoadInfor_LoadName];
     //下载列表
-    NSString * urlString = [NSString stringWithFormat:[NSString stringWithFormat:@"http://app.ccs163.net/downlist/%@/%@"],codeId,username];
+    NSString * urlString = [NSString stringWithFormat:@"http://app.ccs163.net/downlist/%@/%@",codeId,username];
     
     [AFHTTPRequestOperationManager GET:urlString parameter:nil success:^(id responseObject) {
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];

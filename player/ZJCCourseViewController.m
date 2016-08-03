@@ -329,12 +329,12 @@ typedef enum {
     [self creatMVPlyerView];
     // 返回按钮
     [self creatBackButton];
-    // 中间标题
-    [self creatMiddleTitle];
-    // 下载列表按钮
-    [self createDownListButton];
-    // 分栏控制器
-    [self creatPagerViews];
+//    // 中间标题
+//    [self creatMiddleTitle];
+//    // 下载列表按钮
+//    [self createDownListButton];
+//    // 分栏控制器
+//    [self creatPagerViews];
 }
 
 

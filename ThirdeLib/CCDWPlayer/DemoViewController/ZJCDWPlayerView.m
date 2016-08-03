@@ -394,25 +394,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #pragma mark - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>底部控件条相关
 - (void)loadFooterView {
     // 1.底部控件条视图
@@ -563,13 +544,6 @@
     _historyPlaybackTime = _player.currentPlaybackTime;
     
 }
-
-
-
-
-
-
-
 
 
 #pragma mark - 视频总时间
@@ -1441,7 +1415,7 @@
     NSString * userName = [ZJCNSUserDefault getDataUsingNSUserDefaultWithDataType:ZJCUserInfor andKey:UserLoadInfor_LoadName];
     NSString * lessonId = _lessonId;
     NSNumber * videoDuration = [NSNumber numberWithInt:(int)_player.currentPlaybackTime];
-    NSString * stringUrl = [NSString stringWithFormat:[NSString stringWithFormat:@"http://app.ccs163.net/reclook/%@/%@/%@"],userName,videoDuration,lessonId];
+    NSString * stringUrl = [NSString stringWithFormat:@"http://app.ccs163.net/reclook/%@/%@/%@",userName,videoDuration,lessonId];
     
     // 只有时间不同的时候,才会重新发送请求并记录
     if ([_oldTime isEqualToNumber:videoDuration]) {
